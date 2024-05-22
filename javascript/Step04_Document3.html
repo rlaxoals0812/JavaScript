@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_Document3.html</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            background-color: yellow;
+            cursor: pointer;
+            transition-duration: 0.2s;
+            margin-left: -8px;
+            margin-top: -8px;
+            /* 필요한 만큼만 블럭 차지
+            ex) 블럭 높이만큼의 height,내용물 만큼의 width */
+            display: flex;
+            /* 좌우 정렬 */
+            justify-content: center; 
+            /* 상하 정렬 */
+            align-items: center;
+            
+        }
+        body {
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none
+        }
+    </style>
+</head>
+<body>
+    <div class="box">click</div>
+    <script>
+        document.querySelector('.box').addEventListener('mouseover', function(){
+            document.querySelector('.box').style.width = '1902px';
+            document.querySelector('.box').style.height = '1800px';
+            document.querySelector('.box').style.fontSize = '500px';
+        })
+        document.querySelector('.box').addEventListener('mouseout', function(){
+            document.querySelector('.box').style.width = '100px';
+            document.querySelector('.box').style.height = '100px';
+            document.querySelector('.box').style.fontSize = '15px';
+        })
+        document.querySelector('.box').addEventListener('mousedown', function(){
+            document.querySelector('.box').style.backgroundColor = 'blue';
+            document.querySelector('.box').innerText = '???';
+        })
+        document.querySelector('.box').addEventListener('mouseup', function(){
+            document.querySelector('.box').style.backgroundColor = 'yellow';
+            document.querySelector('.box').innerText = 'click';
+        })
+    </script>
+</body>
+</html>

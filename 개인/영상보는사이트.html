@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Object</h2>
+
+<p>이름을 입력하세요:</p>
+
+<input type="text" id="firstName" placeholder="이름">
+<input type="text" id="lastName" placeholder="성">
+<button onclick="displayUser()">제출</button>
+
+<p id="demo"></p>
+
+<script>
+// 사용자 객체 생성
+var user = {
+  firstName: "",
+  lastName: "",
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+// 사용자 이름 표시 함수
+function displayUser() {
+  user.firstName = document.getElementById("firstName").value;
+  user.lastName = document.getElementById("lastName").value;
+  document.getElementById("demo").innerHTML = "이름: " + user.fullName();
+}
+</script>
+<video src="https://www.youtube.com/watch?v=5NRcYRwPJzE" controls width="auto" height="auto"></video>
+</body>
+</html>

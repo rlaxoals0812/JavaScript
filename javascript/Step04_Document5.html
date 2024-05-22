@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_Document5.html</title>
+</head>
+<body>
+    <p class="comment">p1</p>
+    <p class="comment">p2</p>
+    <p class="comment">p3</p>
+    <p class="comment">p4</p>
+    <p class="comment">p5</p>
+    <button id="changeBtn">change</button>
+    <script>
+
+        document.querySelector('#changeBtn').addEventListener('click', ()=>{
+            document.querySelectorAll('.comment').forEach((item)=>{
+                item.style.color='red';
+                console.log(item);
+            });
+        });
+        
+        // document.querySelector('changeBtn').addEventListner('click',()=>{
+                // document.querySelectorAll
+        // })
+        let nums=[1,2,3,4,5];
+        let names=['김구라','해골','원숭이'];
+
+        nums.forEach((item)=>{
+            console.log(item);
+
+        });
+        names.forEach((item)=>{
+            console.log(item);
+        })
+
+    </script>
+</body>
+</html>

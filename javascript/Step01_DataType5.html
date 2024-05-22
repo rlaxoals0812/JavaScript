@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType5.html</title>
+</head>
+<body>
+    <h1>javascript데이터타입</h1>
+    <p><b>array</b>type</p>
+    <script>
+        // 배열에는 주로 한가지 타입의 데이터만 담는게 일반적
+        let nums=[1,2,3,4,5];
+        let names=['1','2','3','4','5'];
+        let data=[true,true,false,false,true];
+        /*
+            회원 한명의 정보는 번호 이름 주소로 이루어짐
+            회원 여러명의 정보를 순서대로 관리하려면 어떤 모양?
+
+            회원 3명의 정보를 배열에 순서대로 담으시오
+        */
+        let mem1 = {num:1,name:'1',addr:'11'};
+        let mem2 = {num:2,name:'2',addr:'22'};
+        let mem3 = {num:3,name:'2',addr:'33'};
+        let mambers = [mem1, mem2, mem3];
+        let mememe = [
+            {num:1,name:'1',addr:'1'},
+            {num:2,name:'2',addr:'2'},
+            {num:3,name:'3',addr:'3'}
+        ];
+        let a=mememe;
+        let b=mememe[0];
+        let c=mememe[0].num;
+        let d=mememe[0].name;
+        let e=mememe[0].addr;
+    </script>
+</body>
+</html>

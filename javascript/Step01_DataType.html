@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType.html</title>
+    <style>
+        #taemin1{
+            font-size: 30px;
+        }
+        #alertbutton{
+            block-size: 100px;
+            inline-size: 100px;
+        }
+        .body1{
+            width: 768px;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        console.log("하나");
+    </script>
+</head>
+<body class="body1">
+    <script>
+        console.log("둘");
+    </script>
+    <p id="demo">JavaScript can hide HTML elements.</p>
+
+    <button type="button" onclick="bottonnone()">hide</button>
+    <button type="button" onclick="buttonblock()">reset</button>
+
+    <h1>javascript data type</h1>
+
+    <p>
+        <strong>number</strong>type과 <strong>string</strong>type
+    </p>
+
+    <div id="taemin1"></div>
+    <button id="alertbutton" type="button" onclick="alert(hi)">alert</button>
+
+    <script>
+        console.log("세엣");
+        // alert("hi");
+        // data를 저장 할 수 있는 이름 지어진 기억 공간을 변수라고 한다. 
+        // 변수를 만들때는 let이라는 예약어를 이용해서만든다
+
+        // let 식별자(변수명)=대입할 값;
+        let hi="welcome"
+
+        alert(hi);
+
+        let myName="kimtaemin";
+
+        document.getElementById("taemin1").style.color = "blue";
+        document.getElementById("taemin1").innerHTML = "Hello, world!";
+
+        document.write(myName);
+
+        // num1 이란 이름 지어진 기억 공간을 만들어서 숫자 data10을 대입하기(저장하기)
+        let num1=10;
+        let num2=20;
+
+        // myname이란 이름 지어진 기억 공간을 만들어 이름 대입
+        let myName2="taemin";
+        let yourName="kimTaemin";
+        let ourName=`cat`;  
+        // ` 사용시 여러줄의 문자열을 편리하게 작성 가능
+        let str1=`
+            하나
+            둘
+            셋
+            
+        `;
+        let home="good";
+        let go="so good";
+
+        function buttonblock() {
+            document.getElementById('demo').style.display='block';
+        }
+        function bottonnone(){
+            document.getElementById('demo').style.display='none';
+        }
+        function Menu(){
+            menu.html
+        }
+    </script>
+</body> 
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none; font-size: 14px;
+        }
+
+        .menu{
+            width: 800px;
+            overflow: hidden;
+            margin: 150px auto;
+        }
+        .menu > li {
+            width: 20%;
+            float: left;
+            text-align: center;
+            line-height: 40px;
+            background-color: rgb(248, 248, 248);
+        }
+        .menu a{
+            color: rgb(46, 53, 53);
+        }
+        .submenu{
+            height: 0;
+            overflow: hidden;
+        }
+        .submenu > li{
+            line-height: 50px;
+            background-color: rgb(255, 255, 255);
+        }
+        .menu > li:hover{
+            background-color: rgb(0, 0, 0);
+            transition-duration: 0.5s;
+        }
+        .menu > li:hover .submenu{
+            height: 250px;
+            transition-duration: 1s;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <ui class="menu">
+        <li>
+            <a href="#">menu</a>
+            <ul class="submenu">
+                <li><a href="https://youtube.com">Youtube</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </li>
+    </ui>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_Example.html</title>
+    <style>
+        p{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inputText" onblur="send()" placeholder="첫번째 값">
+    <button >첫번째 값</button>
+    <button id="sendBtn">1111</button>
+    <p id="result">xxx</p>
+
+    <br>
+    <script>
+        // .addEventListener(이벤트명 callback함수) 글로벌 영역 함수 x여도 됨
+        document.querySelector('#sendBtn').addEventListener('click', ()=>{
+            let msg = document.querySelector("#inputText").value;
+            document.querySelector('#result').innerText=msg
+        });
+
+        function send(){
+        let msg = document.querySelector("#inputText").value;
+        document.querySelector('#result').innerText=msg
+        }
+    </script>
+</body>
+</html>

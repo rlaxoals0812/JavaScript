@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_Document.html</title>
+</head>
+<body>
+    <!-- css ->style 요소
+    selector no need
+    ; 구분
+    <style>요소 css 보다 우선시
+        js로 직접 제어 가능
+        inline css라 부름
+     -->
+    <h1 style="color: red; background-color: antiquewhite;">document object</h1>
+    <p id="one">p</p>
+    <p id="two" class="'my-class">p2</p>
+    <p id="three" class="'my-class">p</p>
+    <button id="myBtn">눌러</button>
+    <button id="changeBtn">바꾸기</button>
+    <button id="changecolor">change</button>
+    <script>
+        document.querySelector('#myBtn').addEventListener('click',function(){
+            console.log('버튼을 눌렀네');
+        });
+        document.querySelector('#changeBtn').addEventListener('click',function(){
+            document.querySelector('h1').innerText = '안녕하세요';
+            });
+        document.querySelector('#changecolor').addEventListener('click',function(){
+            document.querySelector('#two').style.color = 'blue';
+            document.querySelector('#two').style.backgroundColor = 'red';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_Example.html</title>
+    <style>
+        /* *{ */
+            /* width: 100px;
+            padding: 0; */
+            /* margin: 0 auto; */
+        /* } */
+        h1{
+            overflow: scroll;
+            background-color: bisque;
+            width: 200px;
+            margin: 0 auto;
+        }
+        /* p{
+            display: flex;
+            justify-content: center;            
+        } */
+
+    </style>
+</head>
+<body class="바디">
+    <input type="number" id="inputText" placeholder="첫번째 값">
+    <br>
+    <!-- <button type="button" onclick="send()">첫번째 값</button> -->
+    <p id="result"></p>
+    <input type="number" id="inputText2" placeholder="둘째 값">
+    <br><br>
+    <button type="button" onclick="send2()" id="1b">곱</button>
+    <button type="button" onclick="send3()" id="2b">나눗셈</button>
+    <button type="button" onclick="send4()" id="3b">덧셈</button>
+    <!-- <p id="result2">xxx</p> -->
+    <br>
+    <h1 id="결과">결과</h1>
+    <script>
+        // document.getElementById("inputText", 'inputText2')
+        // .addEventListener("keyup", function(event) {
+        //     event.preventDefault();
+        //     if (event.keyCode === 13) {
+        //         document.getElementById("1b").click();
+        //     }
+        // });
+
+        // function send()//send함수 발동 시
+        // {
+        //     let msg = document.querySelector('#inputText').value; //msg value 입력
+        //     document.querySelector('#result').innerText = msg;//msg출력
+        //     document.querySelector('#결과').innerText = Number(msg);
+        //     if(document.querySelector('#inputText2').value){
+        //         document.querySelector('#inputText2').value = 0;
+        //     }
+        // }
+        function send2(){
+            let msg = document.querySelector('#inputText').value;
+            let msg2 = document.querySelector('#inputText2').value;
+            // document.querySelector('#result2').innerText = msg2;
+            document.querySelector('#결과').innerText = Number(msg) * Number(msg2);
+            
+        }
+        function send3(){
+            let msg = document.querySelector('#inputText').value;
+            let msg2 = document.querySelector('#inputText2').value;
+            document.querySelector('#결과').innerText = Number(msg) / Number(msg2);
+        }
+        function send4(){
+            let msg = document.querySelector('#inputText').value;
+            let msg2 = document.querySelector('#inputText2').value;
+            document.querySelector('#결과').innerText = Number(msg) + Number(msg2);
+        }
+        
+        
+    </script>
+</body>
+</html>

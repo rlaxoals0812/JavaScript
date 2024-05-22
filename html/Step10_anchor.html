@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step10_anchor.html</title>
+    <style>
+        .container{
+            width: 768px;
+            /* 값을 두개 명시하면 top,bottom 과 left,right값을 한번에 지정하는 것이다 */
+            margin: 0 auto;
+        }
+        .card{
+            /* 경계선의 굵기 스타일 색상을 한번에 지정 */
+            border: 1px solid #cecece;
+            border-radius: 10px;
+            width: 300px;
+            background-color: antiquewhite;
+        }
+        /* 선택지에서 한칸 띄는 것은 자손 서택자를 의미
+        즉 ,card의 자손 중에서 img선택
+        자식은 바로 인접한 요소가 자식이고
+        자손은 인접하거나 혹은 내부에 어디든지 포함만 되어 있으면 된다. */
+        .card img{
+            max-width: 100%;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>a(anchor)요소는 하이퍼링크 책갈피 자바스크립트 등을 수행할 때 사용</h3>
+        <a href="hello.html">눌러</a>
+        <br>
+        <a href="https://daum.net">다음</a>
+        <br>
+        <!-- 이미지에 링크 걸기 -->
+        <a href="hello.html"><img src="images/1.jpg"></a>
+        <!-- div 전체에 링크 걸기
+        inline요소는 원래 block요소를 자식 요소로 가질 수 없다
+    단a요소만 예외적으로 div같은 블럭요소를 가질 수 있다 -->
+        <a href="hello.html">
+            <div class="card">
+                <h3>asdsasdadsad...</h3>
+                <p>
+                    <img src="images/image1.png"><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, minus consectetur reiciendis id hic vero itaque commodi delectus velit debitis, deleniti fugiat, aut numquam veritatis totam repellendus quibusdam molestiae atque?</p>
+            </div>
+        </a>
+    </div>
+</body>
+</html>

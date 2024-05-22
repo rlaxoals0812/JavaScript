@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_ControlStatement2.html</title>
+</head>
+<body>
+    <h1>if 문 활용</h1>
+    <script>
+        /*js 에선 어떤 변수 안에 있는 값이 비었는지 안비었는지 여부를
+        if문으로 확인 할 수 있다
+
+        empty로 핀장되는 값
+        e,"",null,undefined 이 값들은 false나 마찬가지
+
+        null은 빈 공간을 나타냄
+        */
+       let obj={name:'kim'};
+       if(obj){
+        console.log(obj.name);
+       };
+
+       let obj2=null;
+
+       if(obj2){
+        console.log(obj2.name);
+       };
+    </script>
+</body>
+</html>

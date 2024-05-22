@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_Operator2.html</title>
+</head>
+<body>
+    <h1>논리 연산자</h1>
+    <script>
+        //and 연산자 
+        let result = false&&false;//f
+        let result2 = false&&true;//f
+        let result3 = true&&false;//f
+        let result4 = true&&true;//t
+        //or연산자
+        let result5=false||false;//f
+        let result6=false||true;//t
+        let result7=true||false;//t
+        let result8=true||true;//t
+        //!는 not연산자
+        let result9=!true;//f
+        let result10=!false;//t
+
+        let canWait=true;
+        let canEat=false;
+        let isTall=true;
+        let result11 = canWait&&canEat;
+        let result12 = isTall||canWait;
+        let result13 = !canEat;
+        let result14 = !isTall||canEat;
+    </script>
+</body>
+</html>

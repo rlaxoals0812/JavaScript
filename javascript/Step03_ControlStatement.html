@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_ControlStatement.html</title>
+</head>
+<body>
+    <h1>조건부로 실행되는 if문 블럭 구성하기</h1>
+    <p id="one"></p>
+    <p id="two"></p>
+    <p id="thre"></p>
+    <script>
+        let name=prompt('이름 입력');
+        if(name =='taemin'){
+            document.querySelector('#one').innerText='주인님 반갑습니다';
+        };
+        let isEqual = name == 'taemin';     
+
+        if(isEqual){
+            document.querySelector('#two').innerText = '주인 반갑';
+        };
+    </script>
+</body>
+</html>

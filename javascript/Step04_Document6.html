@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_Document6.html</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+    <div class="box">box5</div>
+    <button id="delBtn"><b>click!!! </b></button>
+    <script>
+        // document.querySelector('div').addEventListener('click', ()=>{
+        //     document.querySelectorAll('.box').forEach((item)=>{
+        //         item.style.color = 'red'
+        //         console.log('box를 클릭했습니다')
+        //     });
+        // });
+        
+        document.querySelectorAll('.box').forEach((item)=>{
+            item.addEventListener('click', ()=>{
+                item.style.backgroundColor='yellow'
+                console.log('box를 클릭했습니다');
+            });
+        });
+        document.querySelector('#delBtn').addEventListener('click', function(){
+            let boxAll = document.querySelectorAll('.box');
+            for(let i=0;i<boxAll.length;i++){
+                boxAll[i].style.backgroundColor = 'white';
+            }
+        })
+        document.querySelector('#delBtn').addEventListener('click',()=>{
+            document.querySelectorAll('.box').forEach((item)=>{
+                item.style.backgroundColor='white';
+            });
+        });
+    </script>
+</body>
+</html>

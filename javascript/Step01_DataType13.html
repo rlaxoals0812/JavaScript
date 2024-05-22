@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType13.html(미완)</title>
+</head>
+<body>
+    <h1>배열 array 활용</h1>
+    <p>
+        배열은 object 이기도 하다
+        툭정 키값으로 저장된 어떤 기본값이 존재한다 
+    </p>
+    <input type="text" id="inputName" placeholder="추가할 배열 입력...">
+    <button onclick="send()">추가</button>
+    <br><br>
+    <input type="number" id="inputNumber2" placeholder="추가할 배열 개수 입력... ">
+    <button onclick="add()">추가</button>
+    <br><br>
+    <input type="number" id="inputNumber" placeholder="뺄 배열 개수 입력...">
+    <button onclick="minus()">빼기</button>
+    
+    <script>
+        let nums=[1,2,3,4,5];
+        let names=['q','w','e','r'];
+
+        // array size
+        // let size = names.length;
+        //add item
+        // nums.push(6);
+        // delete array specific index
+        // nums.splice(2,1);
+        // 배열에 저장된 모든 아이템을 순서대로 함수의 매개변수에 전달받기
+        // nums.forEach(function(item){
+        //     console.log(item);
+        // });
+
+        function send(){
+            let msg = document.querySelector('#inputName').value;
+            names.push(msg);
+            console.log(names);
+        };  
+
+        function minus(){
+            let num = document.querySelector('#inputNumber').value;
+            names.splice(names.length-num);//length-(뺄 개수)
+            console.log(names);
+        };
+
+        function add(){
+            let msg = document.querySelector('#inputName').value;
+            let add2 = document.querySelector('#inputNumber2').value;
+            for(let i = names.length; i < Number(add2); i++ ){
+                names.push(msg);
+                return names;
+            }
+            console.log(names);
+        };//구동안됨
+    </script>
+</body>
+</html>

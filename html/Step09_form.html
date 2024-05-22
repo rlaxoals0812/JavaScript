@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_form.html</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>폼 요소 작성</h1>
+    <div class="container">
+        <!-- 
+            form은 클라이언트가 입력하거나 선택한 정보를 서버에 전송할 양식이다
+            action은 서버에 전송할 경로
+            현재는 서버가 없기 때문에 action테스트는 불가
+            양식 작성법만 학습 예정 
+        -->
+        <form action="login.jsp">
+            <!-- 
+                label의 for 속성의 갓과 input의 id속성의 값은 동일하게 작성이 되어야함
+                name 속성 값은 서버에서 필요한 값이다 
+            -->
+            <label for="email">이메일</label>
+            <input type="text" name="kim" id="email">
+            <br>
+            <label for="pwd">비번임</label>
+            <input type="password" name="taemin" id="pwd">
+            <br>
+            <button type="submit">로그인</button>
+
+        </form>
+    </div>
+    <div>
+        <h1>폼 요소를 줄을 맞춰 출력</h1>
+        <form action="login.jsp">
+            <table>
+                <tr>
+                    <td><label for="email">email</label></td>
+                    <td><input type="text" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="pwd">pwd</label></td>
+                    <td><input type="password" name="pws" id="pwd"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit">login</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

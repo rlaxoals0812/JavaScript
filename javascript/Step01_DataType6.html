@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType6.html</title>
+    <style>
+        #button1 #button2 {
+            position: fixed;
+        }
+        body{
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+        #demo{
+            height: 300px;
+            background-color: rgb(205, 255, 198);
+            text-align: center;
+        }
+        #demo > li {
+            line-height: 40px;
+            background-color: rgb(55, 109, 109);
+        }
+        .submenu{
+            line-height: 50px;
+            background-color: rgb(255, 238, 238);
+        }
+        li{
+            list-style: none;
+            border-color: black;
+        }
+        a{
+            font-size: 20px;
+        }
+        img{
+            width: 20px;
+            height: 20px;
+        }
+        .submenu > li:hover {
+            text-decoration-color: aqua;
+        }
+        div{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- <h1>javascript데이터타입 function 함수로 메뉴 만들기</h1> -->
+
+    <div id="demo">
+        <h1>메뉴</h1>
+        <ul class="submenu">
+            <li><img src="data:image/png;base64,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" alt="유튜브 사진">
+                <a href="https://youtube.com" target="_blank">Youtube</a></li>
+            <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6cGmRWQsR4gMXTCFjpOhy_X3UaVSye00ctA&usqp=CAU" alt="네이버 사진">
+                <a href="https://naver.com" target="_blank">naver</a></li>
+            <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI624ybMJMJGeL-Y_2WJFrIkMCMUHwvUYh_g&usqp=CAU" alt="w3s사진">
+                <a href="https://www.w3schools.com/" target="_blank">W3S</a></li>
+            <li><img src="data:image/jpeg;base64,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" alt="김구라 사진">
+                <a href="https://kimgura.site/student.html" target="_blank">Study</a></li>
+            <li><img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.namu.wiki%2Fi%2FJ23e952js4Wyw8A7DlqrudpC6DPuJvPRIdVBetczsY4DcGsCQbU747NP5FyvqmcdvbqYQhP3olM4YA5aYjD8ow.webp&tbnid=uhRskcO2d7xjjM&vet=12ahUKEwjBrr2bwN-FAxV8YvUHHQ8fDrwQMyhJegUIARCLAg..i&imgrefurl=https%3A%2F%2Fnamu.wiki%2Fw%2F%25EB%258B%25A4%25EC%259D%258C&docid=HupLK_E_gZEkbM&w=256&h=256&q=%EB%8B%A4%EC%9D%8C%20%EC%82%AC%EC%A7%84&ved=2ahUKEwjBrr2bwN-FAxV8YvUHHQ8fDrwQMyhJegUIARCLAg" alt="다음 사진   ">
+                <a href="https://daum.net">Daum</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <button id="button1" type="button" onclick="show()">열기</button>
+    <button id="button2" type="button" onclick='hide()'>닫기</button>
+    
+
+    
+    <script>
+        // 페이지 로딩 시점에 한번 실행
+        let hide = function() {
+            document.getElementById('demo').style.display = 'none';
+        }
+        // 함수가 콜될 때 실행된다
+
+        let show = function() {
+            document.getElementById('demo').style.display = 'block';
+        }
+        let mem ={num:1, name:1, addt:1};
+    </script>
+</body>
+</html>
+
+                

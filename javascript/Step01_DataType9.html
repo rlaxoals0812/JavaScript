@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType9.html</title>
+</head>
+<body>
+    <h2>js data type</h2>
+    <p><strong>function</strong>type scope</p>
+    <script>
+        /* 페이지 로딩 시점 실행되는 영역은 global영역(전역)
+        global영역에 정의된 자원들은 어디서나 사용가능
+        */
+
+        let myName = '김구라';
+        function test() {
+            // 중괄호에 속한 영역은 local영역
+            // 이 영역에 정의된 자원은 해당 지역 안에서만 사용 가능
+            let yourName = '해골';
+            console.log(yourName);
+        };
+
+        function test2(){
+            //local영역 안에서 바깥 영역에 정의된 자원 사용 가능
+            console.log(yourName);
+        }
+    </script>
+</body>
+</html>

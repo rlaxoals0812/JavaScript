@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_form2.html</title>
+    <style>
+        fieldset{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>This is signup form</h1>
+        <form action="signup.jsp">
+            <label for="email">email</label>
+            <input type="text" name="email" id="email"><br>
+            <fieldset>
+                <legend>choose gender</legend> 
+                <label>
+                    <input type="radio" name="gender" value="man" checked>man
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="woman"> woman
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>choose gender</legend>
+                <label>
+                    <input type="checkbox" name="hobby" value="soccer">soccer
+                </label>
+                <label>
+                    <input type="checkbox" name="hobby" value="baking">baking
+                </label>
+                <label>
+                    <input type="checkbox" name="hobby" value="piano">piano
+                </label>
+                <label>
+                    <input type="checkbox" name="hobby" value="etc ">etc
+                </label>
+            </fieldset>
+
+            <label for="job">job
+                <select name="job" id="job">
+                    <option value="">choose</option>
+                    <option value="programmer">programmer</option>
+                    <option value="doctor">doctor</option>
+                    <option value="etc">etc</option>
+                </select>
+            </label>
+            <br>    
+            <label for="lunch">choose lunch</label>
+            <select name="lunch" id="lunch">
+                <optgroup label="boonsik">
+                    <option>ramen</option>
+                    <option>JJolmen</option>
+                    <option>kimbop</option>
+                </optgroup>
+                <optgroup label="joongsik">
+                    <option>jajang</option>
+                    <option>JJam</option>
+                    <option>goon</option>
+                </optgroup>
+            </select>
+            <br>    
+            <label for="myFile">첨부파일</label>
+            <br>
+            <input type="file" name="myFile" id="myFile">
+            <br>
+            <label for="comment">하고픈말</label>
+            <br>
+            <textarea name="comment" id="comment"></textarea>
+            <br>
+            <button type="submit">sign up</button>
+        </form>
+    </div>
+</body>
+</html>

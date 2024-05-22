@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click speed test</title>
+</head>
+<body>
+    <div id="clickArea" 
+    style="width: 200px;height: 200px;background-color: red;"></div>
+    <div id="result"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var clickArea = document.getElementById('clickArea');
+    var result = document.getElementById('result');
+    var startTime;
+    var endTime;
+
+    clickArea.addEventListener('mousedown', function() {
+        startTime = new Date();
+        this.style.backgroundColor = 'green';
+    });
+
+    clickArea.addEventListener('mouseup', function() {
+        endTime = new Date();
+        var reactionTime = (endTime - startTime) / 1000;
+        result.textContent = '반응 속도: ' + reactionTime + '초';
+        this.style.backgroundColor = 'red';
+    });
+});
+    </script>
+</body>
+</html>

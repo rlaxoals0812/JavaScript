@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType10.html</title>
+</head>
+<body>
+    <script>
+        function test() {
+            console.log('test() 호출됨');
+        }
+        let a = test();//undefined js에서 call한 위치는 모두 실행 이후에 어떤 값으로 대체됨(리턴값)
+
+        let b = test;//function
+        
+        document.designMode = 'on';
+
+        function getNum(){
+            console.log("getNum called");
+            return 999;
+        }
+
+        function getNum2(){
+            let num = 999;
+            console.log('getNum() 호출됨');
+            // 변수 안에 있는 값을 변수명으로 리턴해 줄 수 있음
+            return num;
+        }
+        function getName(){
+            let name = 'kimgura';
+            console.log('getName() 호출됨');
+            return name;
+        }
+        function getName2(){
+            return "kimgura";
+        }
+        function isEven(){
+            return true;
+        }
+        function getMember(){
+            let mem={num:1, name:'2',addr:'3'};
+            return mem;
+        }
+        function getFriends(){
+            let friends=['1','2','3','4','5'];
+            return friends;
+        }
+        let myobj={
+            getData:function(){
+                let data={num:1, name:'gura'};
+                return data;
+            },
+            getDatas:function(){
+                let datas=['asd','asd','asd'];
+                return datas;
+            }
+        }
+    </script>
+</body>
+</html>

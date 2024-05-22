@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_Document4.html</title>
+    <style>
+        .box, .box1, .box2, .box3, .box4{
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <button id="changeBtn">change</button>
+    <button id="delBtn">delete</button>
+        <div class="box">div1</div>
+        <div class="box">div2</div>
+        <div class="box">div3</div>
+        <div class="box">div4</div>
+        <div class="box">div5</div>
+        <div class="box">div1</div>
+        <div class="box">div2</div>
+        <div class="box">div3</div>
+        <div class="box">div4</div>
+        <div class="box">div5</div>
+        <div class="box">div6</div>
+        <div class="box">div7</div>
+        <div class="box">div8</div>
+        <div class="box">div9</div>
+        <div class="box">div10</div>
+        <div class="box">div11</div>
+        <div class="box">div12</div>
+        <div class="box">div13</div>
+        <div class="box">div14</div>
+        <div class="box">div15</div>
+        <div class="box">div16</div>
+        <div class="box">div17</div>
+        <div class="box">div18</div>
+        <div class="box">div19</div>
+        <div class="box">div20</div>
+        <div class="box">div21</div>
+        <div class="box">div22</div>
+        <div class="box">div23</div>
+        <div class="box">div24</div>
+        <div class="box">div25</div>
+        <div class="box">div26</div>
+        <div class="box">div27</div>
+        <div class="box">div28</div>
+        <div class="box">div29</div>
+        <div class="box">div30</div>
+        <div class="box">div31</div>
+        <div class="box">div32</div>
+        <div class="box">div33</div>
+        <div class="box">div34</div>
+        <div class="box">div35</div>
+        <div class="box">div36</div>
+        <div class="box">div37</div>
+        <div class="box">div38</div>
+        <div class="box">div39</div>
+        <div class="box">div40</div>
+        <div class="box">div41</div>
+        <div class="box">div42</div>
+        <div class="box">div43</div>
+        <div class="box">div44</div>
+        <div class="box">div45</div>
+        <div class="box">div46</div>
+        <div class="box">div47</div>
+        <div class="box">div48</div>
+        <div class="box">div49</div>
+        <div class="box">div50</div>
+        <div class="box">div51</div>
+        <div class="box">div52</div>
+        <div class="box">div53</div>
+        <div class="box">div54</div>
+        <div class="box">div55</div>
+        <div class="box">div56</div>
+        <div class="box">div57</div>
+        <div class="box">div58</div>
+        <div class="box">div59</div>
+        <div class="box">div60</div>
+        <div class="box">div61</div>
+        <div class="box">div62</div>
+        <div class="box">div63</div>
+        <div class="box">div64</div>
+        <div class="box">div65</div>
+        <div class="box">div66</div>
+        <div class="box">div67</div>
+        <div class="box">div68</div>
+        <div class="box">div69</div>
+        <div class="box">div70</div>
+        <div class="box">div71</div>
+        <div class="box">div72</div>
+        <div class="box">div73</div>
+        <div class="box">div74</div>
+        <div class="box">div75</div>
+        <div class="box">div76</div>
+        <div class="box">div77</div>
+        <div class="box">div78</div>
+        <div class="box">div79</div>
+        <div class="box">div80</div>
+        <div class="box">div81</div>
+        <div class="box">div82</div>
+        <div class="box">div83</div>
+        <div class="box">div84</div>
+        <div class="box">div85</div>
+        <div class="box">div86</div>
+        <div class="box">div87</div>
+        <div class="box">div88</div>
+        <div class="box">div89</div>
+        <div class="box">div90</div>
+        <div class="box">div91</div>
+        <div class="box">div92</div>
+        <div class="box">div93</div>
+        <div class="box">div94</div>
+        <div class="box">div95</div>
+        <div class="box">div96</div>
+        <div class="box">div97</div>
+        <div class="box">div98</div>
+        <div class="box">div99</div>
+        <div class="box">div100</div>
+    <script>
+        document.querySelector('#changeBtn').addEventListener('click', function(){
+            // let boxAll = document.querySelectorAll('.box');
+            // for(let i=0;i<boxAll.length;i++){
+            //     boxAll[i].style.backgroundColor = 'yellow';
+            // }
+            document.querySelectorAll('.box').forEach((item)=>{
+                item.style.backgroundColor = 'yellow';
+            })
+        })
+        document.querySelector('#delBtn').addEventListener('click', function(){
+            let boxAll = document.querySelectorAll('.box');
+            for(let i=0;i<boxAll.length;i++){
+                boxAll[i].style.backgroundColor = 'white';
+            }
+        })
+    </script>
+</body>
+</html>

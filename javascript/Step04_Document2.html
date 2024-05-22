@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_Document2.html</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            background-color: yellow;
+            /* margin-left: 100px; */
+            transition-duration: 0.5s;
+            /* transition: margin-left 1s linear; */
+            
+        }
+    </style>
+</head>
+<body>
+    <button id="moveBtn" style="width: 100px; height: 30px;">move</button>
+    <button id="reset" style="width: 100px; height: 30px;">reset</button>
+    <div class="box">박스</div>
+    <script>
+        document.querySelector('#moveBtn').addEventListener('click', function(){
+            document.querySelector('.box').style.marginLeft = '100px';
+        })
+        document.querySelector('#reset').addEventListener('click', function(){
+            document.querySelector('.box').style.marginLeft = '0px';
+        })
+    </script>
+</body>
+</html>
