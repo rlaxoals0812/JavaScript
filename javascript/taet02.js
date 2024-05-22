@@ -12,4 +12,4 @@ document.querySelector('#one').addEventListener('mouseover', function(){
 
 document.querySelector('#inputMsg').value = '안녕하세요';
 
-document.querySelector('#one').innerText = 'p1입니다';oracle
+document.querySelector('#one').innerText = 'p1입니다';
